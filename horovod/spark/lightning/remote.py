@@ -235,7 +235,7 @@ def RemoteTrainer(estimator, metadata, ckpt_bytes, run_id, dataset_idx, train_ro
             progress_bar_refresh_rate = _train_steps_per_epoch
 
             kwargs = {'accelerator': 'horovod',
-                      'gpus': _num_gpus,
+                      # 'gpus': _num_gpus,
                       'callbacks': callbacks,
                       'max_epochs': epochs,
                       'logger': train_logger,
